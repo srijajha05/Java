@@ -50,12 +50,27 @@ public class checkIfArrayIsSubsetOfAnotherArray {
         }
         return true;
     }
-
+    public static boolean checkUsingHashMap(int[] arr, int[] subArr){
+        if(subArr.length>arr.length){
+            return false;
+        }
+        HashMap<Integer,Boolean> map = new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            map.put(arr[i], true);
+        }
+        for(int j=0;j<subArr.length;j++){
+            if(map.containsKey(arr[j])==false){
+                return false;
+            }
+        }
+        return true;
+    }
     
     public static void main(String[] args) {
         int [] arr ={2,3,1,5,4};
         int [] subArr ={2,3,1};
         System.out.println(check(arr,subArr));
         System.out.println(isASubset(arr, subArr));
+        System.out.println(checkUsingHashMap(arr,subArr));
     }
 }
