@@ -13,7 +13,6 @@ public class sortAnArraybyAnotherArray {
                 map.put(arr1[i], 1);
             }
         }
-        System.out.println(map);
         int count = 0;
         for(int i=0;i<arr2.length;i++){
             if(map.containsKey(arr2[i])){
@@ -33,7 +32,7 @@ public class sortAnArraybyAnotherArray {
                 count2++;
             }
         }
-        Arrays.sort(remainingArray);
+        Arrays.sort(remainingArray);//sorted the reamaining elements
         for(int val:remainingArray){
             arr1[count] = val;
             count++;
