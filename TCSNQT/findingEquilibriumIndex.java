@@ -16,8 +16,25 @@ public class findingEquilibriumIndex{
             }
         }
     }
+    public static void optimalSolution(int [] arr){
+        int sum =0;
+        for(int i=0;i<arr.length;i++){
+           sum = sum+arr[i];
+        }
+        int prefix=0;
+        int suffix = sum;
+        for(int i=0;i<arr.length;i++){
+           
+            suffix = suffix-arr[i];
+            if(prefix == suffix){
+                System.out.println(i);
+            }
+            prefix = prefix+arr[i];
+        }
+    }
     public static void main(String[] args) {
         int arr[] = {1,-1,4};
         findEquilibrium(arr);
+        optimalSolution(arr);
     }
 }
