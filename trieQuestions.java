@@ -58,6 +58,21 @@ public class trieQuestions {
         }
         return false;
     }
+    public static boolean checkPrefix(String key){
+        Node current =root;
+        for(int i=0;i<key.length();i++){
+            int index = key.charAt(i) -'a';
+
+            Node node = current.children[index];
+        
+            if(node==null){
+                return false;
+            }
+            
+            current = current.children[index];
+        }
+        return true;
+    }
     public static void main(String[] args) {
         String[] word = {"i","like" ,"sam","samsung","mobile","ice"};
         String key ="ilikesamsung";
@@ -66,6 +81,12 @@ public class trieQuestions {
         }
         System.out.println(wordBreak(key));
 
+        if(checkPrefix("samsun")){
+            System.out.println("It is present");
+        }
+        else{
+            System.out.println("Not present");
+        }
         
     }
 }
