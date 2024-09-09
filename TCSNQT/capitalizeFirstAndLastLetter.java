@@ -10,10 +10,10 @@ public class capitalizeFirstAndLastLetter {
                 sb.setCharAt(i, (char)((int)s.charAt(i)-32));
             }
             else if(s.charAt(i)==' '){
-                if(((int)s.charAt(i-1)-32) >65){
+                if(((int)s.charAt(i-1)-32) >=65){
                     sb.setCharAt(i-1, (char)((int)s.charAt(i-1)-32));
                 }
-                if(((int)s.charAt(i+1)-32) > 65){
+                if(((int)s.charAt(i+1)-32) >= 65){
                     sb.setCharAt(i+1, (char)((int)s.charAt(i+1)-32));
                 }
             }
