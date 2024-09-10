@@ -6,7 +6,7 @@ public class capitalizeFirstAndLastLetter {
     public static void capitalize(String s){
         StringBuilder sb = new StringBuilder(s);
         for(int i =0 ;i<s.length();i++){
-            if((i==0  || i==s.length()-1) && (int)s.charAt(i) >=97) {
+            if((i==0  || i==s.length()-1) && (int)s.charAt(i)-32 >=65) {
                 sb.setCharAt(i, (char)((int)s.charAt(i)-32));
             }
             else if(s.charAt(i)==' '){
