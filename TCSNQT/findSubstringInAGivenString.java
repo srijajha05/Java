@@ -20,5 +20,6 @@ public class findSubstringInAGivenString {
         System.out.println("Enter second string");
         String s2 = sc.nextLine();
         checkSubstring(s1,s2);
+        
     }
 }
